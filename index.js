@@ -6,7 +6,7 @@ const { rewriteImport } = require('./utils');
 const compilerSFC = require('@vue/compiler-sfc');
 const compilerDOM = require('@vue/compiler-dom');
 const app = new Koa();
-console.log('init')
+
 app.use(async (ctx) => {
   const { url } = ctx.request;
   if (url === '/') {
