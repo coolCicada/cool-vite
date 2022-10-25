@@ -2,13 +2,13 @@
 const Koa = require('koa');
 const app = new Koa();
 
-const { addPlugin, execute } = require('./plugins');
+const { addPlugin, execute } = require('./lib/plugins');
 addPlugin(
-  require('./plugin/htmlPlugin'),
-  require('./plugin/jsPlugin'),
-  require('./plugin/modulePlugin'),
-  require('./plugin/vuePlugin'),
-  require('./plugin/cssPlugin'),
+  require('./lib/plugin/htmlPlugin'),
+  require('./lib/plugin/jsPlugin'),
+  require('./lib/plugin/modulePlugin'),
+  require('./lib/plugin/vuePlugin'),
+  require('./lib/plugin/cssPlugin'),
 );
 
 app.use(async (ctx) => {
